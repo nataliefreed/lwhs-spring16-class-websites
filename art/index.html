@@ -63,6 +63,7 @@ h1 {
 
     <script type="application/processing">
       String joke = "no joke yet!";
+      public String mode = "modern";
       void setMode(String mode){
          background(0,0,0);
          if(mode.equals("modern")){
@@ -87,9 +88,15 @@ h1 {
         size(800, 500); 
         background(50); 
       } 
-      void draw() { 
-        ellipse(mouseX, mouseY, 10, 10);
-        text(joke, 30, 30);
+      void draw() {
+      	if(mode.equals("modern")){
+      		fill(int(random(0,255)),int(random(0,255)),int(random(0,255)));
+      		rect(mouseX, mouseY, int(random(5,100)), int (random(5,100)));
+      		text(joke, 30, 30);
+      	}else{
+        	ellipse(mouseX, mouseY, 10, 10);
+        	text(joke, 30, 30);
+        }
       }
       
       void setJoke(String j) {
