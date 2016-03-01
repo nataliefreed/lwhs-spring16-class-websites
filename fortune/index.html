@@ -2,7 +2,7 @@
 <html >
   <head>
     <meta charset="UTF-8">
-    <title>A Pen by  Captain Anonymous</title>
+    <title>Fortune</title>
     
     
     
@@ -28,12 +28,13 @@
         <style>
       /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
       body {
-  background-color: #000;
+  background-color: #aa381e;
+  text-align:center
 }
 
 #window {
-  width: 800px;
-  height: 500px;
+  width: 400px;
+  height: 50px;
   margin: 0 auto;
   border: 1px solid #ffffff;
 }
@@ -67,15 +68,16 @@ h1 {
 </head>
 
 <body>
-  <h1>Fortune Cookie</h1>
+  <h1><font color="#CC9900">Fortune Cookie</font></h1>
     
-  How are you feeling right now?<br>
+  <font color="#CC9900">How are you feeling right now?</font><br>
   <input type="text"><br><br>
-  What's your name?<br>
+  <font color="#CC9900">What's your name?</font><br>
   <input type="text"><br><br>
-  What was the last thing you ate?<br>
+  <font color="#CC9900">What was the last thing you ate?</font><br>
   <input type="text"><br><br>
   <button onclick="latest();">Get My Fortune</button>
+  
   
   <div id="window">
 
@@ -85,7 +87,7 @@ String [] pFortune;
 void setup(){
   stroke(0);
   fill(0);
-  size(800,100);
+  size(400,50);
 /*   pFortune = new String[4];
   pFortune[0]="You make lots of money";
   pFortune[1]="You will make many friends soon";
@@ -96,7 +98,7 @@ void draw(){
   background(255);
   //newFortune();
     fill(0);
-      text(fortune, 5, 15);
+      text(fortune, 5, 25);
 }
 
 void setFortune(String f){
