@@ -1,0 +1,26 @@
+body {
+  background-color: #000;
+}
+
+#window {
+  width: 800px;
+  height: 500px;
+  margin: 0 auto;
+  border: 1px solid #ffffff;
+}
+
+h1 {
+  font-size: 50px;
+  font-family: arial, sans-serif;
+  text-align: center;
+  color: white;
+  font-weight: normal;
+  margin: 20px 0;
+}
+
+.mainButtons {
+  margin: auto;
+  width: 10%;
+  padding: 30px;
+  color: white;
+}
