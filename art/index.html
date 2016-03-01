@@ -62,7 +62,6 @@ h1 {
   <div id="window">
 
     <script type="application/processing">
-      String joke = "no joke yet!";
       void setMode(String mode){
          background(0,0,0);
          if(mode.equals("modern")){
@@ -89,11 +88,6 @@ h1 {
       } 
       void draw() { 
         ellipse(mouseX, mouseY, 10, 10);
-        text(joke, 30, 30);
-      }
-      
-      void setJoke(String j) {
-        joke = j;
       }
     </script>
 
