@@ -19,7 +19,7 @@ var latest = function() {
     if (request.readyState == 4 && request.status == 200) {
         var answer = JSON.parse(request.responseText);
           if (!p) {
-            p = Processing.getInstanceById('sketch'); //undefined! why?!
+            p = Processing.getInstanceById('sketch');
             console.log(p);
           }
           console.log(answer[0]);
