@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Processing on CodePen</title>
+    
+    
+    
+    
+        <style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      body {
+  background-color: #000;
+}
+
+#window {
+  width: 800px;
+  height: 500px;
+  margin: 0 auto;
+  border: 1px solid #ffffff;
+}
+
+h1 {
+  font-size: 50px;
+  font-family: arial, sans-serif;
+  text-align: center;
+  color: white;
+  font-weight: normal;
+  margin: 20px 0;
+}
+
+.mainButtons {
+  margin: auto;
+  width: 10%;
+  padding: 30px;
+  color: white;
+}
+    </style>
+
+    
+        <script src="js/prefixfree.min.js"></script>
+
+    
+  </head>
+
+  <body>
+
+    <html>
+
+<head>
+</head>
+
+<body>
+  <h1>A Really Really Exciting Title</h1>
+
+  <div class="mainButtons">
+    Pick your art style:
+    <button onclick="modern();">Modern</button>  <button onclick="abstract();">Abstract</button>
+    <button onclick="impressionist();">Impressionist</button>
+  </div>
+
+  <div id="window">
+
+    <script type="application/processing">
+      String joke = "no joke yet!";
+      public String style = "modern";
+      void setMode(String mode){
+         background(0,0,0);
+         if(mode.equals("modern")){
+         	style =  "modern";
+           background(0,0,0);
+          stroke(0,0,0);
+          fill(255);
+         }
+         else if(mode.equals("abstract")){
+         	style ="abstract";
+             background(255,0,0);
+           stroke(0,0,0);
+          fill(255);
+         }
+         else if(mode.equals("impressionist")){
+         	style = "impressionist";
+              fill(0,0,255, 50);
+               noStroke();
+              background(0,255,0);
+         }
+      
+      }
+      
+      void setup() { 
+        size(800, 500); 
+        background(50); 
+      } 
+      void draw() {
+      	if(style=="modern"){
+      		fill(int(random(0,255)),int(random(0,255)),int(random(0,255)));
+      		rect(mouseX, mouseY, int(random(5,100)), int (random(5,100)));
+      		text(joke, 30, 30);
+      	}else{
+        	ellipse(mouseX, mouseY, 10, 10);
+        	text(joke, 30, 30);
+        }
+      }
+      
+      void setJoke(String j) {
+        joke = j;
+      }
+    </script>
+
+    <canvas id="sketch" width="800px" height="500px"></canvas>
+  </div>
+</body>
+
+</html>
+    <script src='http://cloud.github.com/downloads/processing-js/processing-js/processing-1.4.1.min.js'></script>
+
+        <script src="js/index.js"></script>
+
+    
+    
+    
+  </body>
+</html>
